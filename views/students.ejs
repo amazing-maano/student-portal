@@ -1,0 +1,61 @@
+<div class="dashdiv">
+
+    <table class="table mt-0">
+        <thead class="thead-light">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Contact No.</th>
+                <th>Address</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="table_body">
+            <%if (sdata.length != null){ %>
+                <% sdata.forEach(function(outvalue){ %>
+                    <tr>
+                        <td>
+                            <%= outvalue.fname %>
+                        </td>
+                        <td>
+                            <%= outvalue.lname %>
+                        </td>
+                        <td>
+                            <%= outvalue.semail %>
+                        </td>
+                        <td>
+                            <%= outvalue.sphone %>
+                        </td>
+                        <td>
+                            <%= outvalue.saddress %>
+                        </td>
+                        <td>
+                            <a id="editlink" href="/students/edit/<%= outvalue._id %>" data-id="<%= outvalue._id %>">Edit</a>
+                        </td>
+                        <td>
+                            <a href="#" class="deleteStudent" data-id="<%= outvalue._id %>">Delete</a>
+                        </td>
+
+
+                    </tr>
+                    <% })}else{ %>
+                        <tr>
+                            <td colspan="6">No Record Found</td>
+
+                        </tr>
+                        <% } %>
+        </tbody>
+    </table>
+
+    <div class="headbar">
+        <nav class="nav navbarhead float-right">
+            <a class="nav-link" href="/dashboard">Home</a>
+            <a class="nav-link" href="/students/add">Add Student</a>
+
+        </nav>
+    </div>
+
+    <% include ./partials/messages %>
+</div>

@@ -1,0 +1,41 @@
+<div class="wrap1 p-l-30 p-r-30 p-t-30 p-b-30">
+    <div class="signup-form">
+        <form name="vform" action="/register" method="post" class="formdiv m-0">
+            <span class="signup-form-title col-xs-8 col-xs-offset-4">
+                Register
+              </span>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name="name" value="<%= typeof name != 'undefined' ? name : '' %>">
+                <span id="name_error"></span>
+            </div>
+            <div class="form-group">
+                <label for="name">Email Address</label>
+                <input type="email" class="form-control" name="email" value="<%= typeof email != 'undefined' ? email : '' %>">
+                <span id="email_error"></span>
+            </div>
+            <div class="form-group">
+                <label for="name">Password</label>
+                <input type="password" id="myInput" class="form-control" name="password" value="<%= typeof password != 'undefined' ? password : '' %>">
+
+            </div>
+            <div class="form-group">
+                <label for="name">Confirm Password</label>
+                <input type="password" id="myInput2" class="form-control" name="password2" value="<%= typeof password2 != 'undefined' ? password2 : '' %>">
+                <span id="password_error"></span>
+
+
+            </div>
+            <div class="form-group">
+                <div class="col-xs-8 col-xs-offset-4">
+                    <button id="myForm" class="btn btn-primary btn-lg">
+                        Register
+                      </button>
+                </div>
+            </div>
+            <% include ./partials/messages %>
+        </form>
+
+        <div class="text-center">Already have an account? <a href="/login">Login here</a></div>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="dashdiv">
+    <a href="/dashboard">Back</a>
+    <span class="signup-form-title">
+        Create Class
+    </span>
+    <form method="post" class="formdiv m-0" id="classForm">
+
+        <table border="0" id="demotable">
+            <tbody>
+                <tr>
+                    <td class="tdlabel"><label for="cname">Class Name</label></td>
+                    <td><input type="text" name="cname" id="cname" maxlength="30" /> (max 30 characters a-z and A-Z)</td>
+
+                </tr>
+
+                <tr>
+                    <td class="tdlabel"><label for="desc">Description</label></td>
+                    <td><textarea name="desc" rows="4" cols="30" id="desc"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td class="tdlabel"><label for="exampleFormControlSelect1">Select Student</label></td>
+                    <td class="form-group">
+                        <select class="form-control" id="exampleFormControlSelect1" name="sname">
+                            <%if (studentname.length != null){ %>
+                                <% studentname.forEach(function(svalue){ %>
+                                    <option id="<%= svalue._id %>"><%= svalue.fname %></option>
+                                    <% })}else{ %>
+                                        <option>No records</option>
+                                        <% } %>
+                        </select>
+                        <a class="btn btn-primary pull-right add-record" data-added="0">&nbsp;Add Row</a>
+                    </td>
+                </tr>
+
+                <tr id="tablebody">
+
+                </tr>
+                <tr>
+                    <td align="center"><input type="submit" id="addClass" value="Add" class="btn btn-primary"></td>
+                    <td align="center"><input type="reset" id="reset-btn" value="Reset" class="btn btn-success"></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </form>
+    <div style="display:none;">
+        <table id="sample_table">
+            <td class="tdlabel"><label for="exampleFormControlSelect1"></label></td>
+            <td align="right" class="form-group">
+                <select class="form-control" id="exampleFormControlSelect1" name="sname">
+                    <%if (studentname.length != null){ %>
+                        <% studentname.forEach(function(svalue){ %>
+                        <option><%= svalue.fname %></option>
+                            <% })}else{ %>
+                                   <option>No records</option>
+                                <% } %>
+                </select>
+
+            </td>
+        </table>
+    </div>
+
+    <% include ./partials/messages %>
+</div>

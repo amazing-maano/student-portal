@@ -1,0 +1,31 @@
+<div class="signup-form">
+    <form name="vform" action="/login" method="post" class="formdiv m-0">
+        <span class="signup-form-title mb-5">
+            Login
+          </span>
+
+
+        <div class="form-group">
+            <label class="control-label col-xs-4">Email Address</label>
+            <div class="col-xs-8">
+                <input type="email" class="form-control" name="email" required="required">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-4">Password</label>
+            <div class="col-xs-8">
+                <input type="password" id="myInput3" class="form-control" name="password" required="required">
+                <input type="checkbox" onclick="myFunction2()"><label for="checkbox">Show Password</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="mt-4">
+
+                <button type="submit" class="btn btn-primary btn-lg">Login</button>
+            </div>
+        </div>
+    </form>
+    <% include ./partials/messages %>
+        <div class="text-center">Already have an account? <a href="/register">Register here</a></div>
+</div>

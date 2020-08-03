@@ -1,0 +1,43 @@
+<div class="dashdiv">
+    <p id="updateData"></p>
+
+    <form method="post" id="editform" class="formdiv m-0">
+        <table border="0" style="width:100%">
+
+            <tr>
+                <td><label for="fname">First Name</label></td>
+                <td><input type="text" name="fname" id="fname" maxlength="30" " value="<%=student.fname %>"/> (max 30 characters a-z and A-Z)</td>
+
+            </tr>
+            <tr>
+                <td><label for="lname">Last Name</label></td>
+                <td><input type="text " name="lname " id="lname" maxlength="30 " value="<%= student.lname %>" /> (max 30 characters a-z and A-Z)</td>
+
+            </tr>
+
+            <tr>
+                <td><label for="semail">Email</label></td>
+                <td><input type="text " name="semail " id="semail" maxlength="100 " value="<%= student.semail %>" /></td>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="sphone">Contact No.</label></td>
+                <td><input type="text " name="sphone " id="sphone" maxlength="10 " value="<%= student.sphone %>" /> (10 digit number)</td>
+            </tr>
+            <tr>
+                <td><label for="saddress">Address</label></td>
+                <td><textarea name="saddress " rows="4 " cols="30 " id="saddress" placeholder=" "><%= student.saddress %></textarea></td>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" id="editStudent" value="Edit" data-id="<%=student._id %>" class="btn btn-primary"></td>
+                <td><a href="/students/all">Back</a></td>
+            </tr>
+        </table>
+    </form>
+
+
+
+    <% include ./partials/messages %>
+</div>

@@ -1,0 +1,40 @@
+{
+    "name": "task4-local",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "start": "node ./bin/www",
+        "devstart": "nodemon ./bin/www",
+        "serverstart": "DEBUG=task4-local:* npm run devstart"
+    },
+    "dependencies": {
+        "bcrypt": "^4.0.1",
+        "body-parser": "^1.19.0",
+        "connect-flash": "^0.1.1",
+        "cookie-parser": "~1.4.4",
+        "cors": "^2.8.5",
+        "debug": "~2.6.9",
+        "ejs": "~2.6.1",
+        "express": "~4.16.1",
+        "express-ejs-layouts": "^2.5.0",
+        "express-session": "^1.17.1",
+        "express-validator": "^6.5.0",
+        "http-errors": "~1.6.3",
+        "jquery": "^3.5.1",
+        "mongoose": "^5.9.15",
+        "morgan": "^1.10.0",
+        "passport": "^0.4.1",
+        "passport-local": "^1.0.0"
+    },
+    "devDependencies": {
+        "eslint": "^7.5.0",
+        "eslint-config-airbnb-base": "^14.2.0",
+        "eslint-config-standard": "^14.1.1",
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-standard": "^4.0.1",
+        "nodemon": "^2.0.4",
+        "prettier": "2.0.5"
+    }
+}
