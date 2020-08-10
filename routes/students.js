@@ -1,8 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const ObjectId = require('mongodb').ObjectId;
 const Student = require('../models/Student');
-const { ensureAuthenticated } = require('../config/auth')
 
 router.post('/add', (req, res, next) => {
     console.log('Post a User: ' + JSON.stringify(req.body))

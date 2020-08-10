@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
-const { Classes } = require('../models/Classes').schema;
 
 const StudentSchema = new Schema({
 

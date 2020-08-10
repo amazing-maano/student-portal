@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 
 const passport = require('passport');
-const { ensureAuthenticated } = require('../config/auth')
     //User Model
 const User = require('../models/User');
 
